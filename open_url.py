@@ -11,15 +11,7 @@ good_codes = [httplib.OK, httplib.FOUND, httplib.MOVED_PERMANENTLY]
 #This class will handles any incoming request from
 #the browser 
 class myHandler(BaseHTTPRequestHandler):
-	
-	#Handler for the GET requests
-	def do_GET(self):
-		self.send_response(200)
-		self.send_header('Content-type','text/html')
-		self.end_headers()
-		# Send the html message
-		self.wfile.write("Hello World !")
-		return
+    
 	def do_POST(self):
             # Parse the form data posted
             form = cgi.FieldStorage(
